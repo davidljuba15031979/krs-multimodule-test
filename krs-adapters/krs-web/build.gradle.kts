@@ -20,33 +20,36 @@ dependencyManagement {
     }
 }
 
-
 repositories {
     // Use jcenter for resolving dependencies.
     // You can declare any Maven/Ivy/file repository here.
     jcenter()
 }
 
-
 dependencies {
+    implementation( project(":krs-application"))
 
-    implementation(project(":krs-application"))
-    implementation("org.springframework.boot:spring-boot-starter-data-mongodb-reactive")
+
+    // Align versions of all Kotlin components
+    implementation(platform("org.jetbrains.kotlin:kotlin-bom"))
 
     // Use the Kotlin JDK 8 standard library.
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.0-RC")
 
-    testImplementation("io.kotlintest:kotlintest-runner-junit5:3.3.2")
-    // https://stackoverflow.com/questions/53277045/how-does-kotlintest-test-spring-boot-application
-    testImplementation("org.springframework.boot:spring-boot-starter-test")
+    // Use the Kotlin test library.
     testImplementation("org.jetbrains.kotlin:kotlin-test")
-    testImplementation("org.jetbrains.kotlin:kotlin-test-junit")
-    testImplementation("io.kotlintest:kotlintest-extensions-spring:3.4.0")
-    testImplementation("org.junit.jupiter:junit-jupiter-api:5.3.1")
-    testImplementation("org.junit.jupiter:junit-jupiter-engine:5.3.1")
-}
 
+    // Use the Kotlin JUnit integration.
+    testImplementation("org.jetbrains.kotlin:kotlin-test-junit")
+
+
+    implementation("org.springframework.boot:spring-boot-starter-thymeleaf")
+    implementation("org.springframework.boot:spring-boot-starter-webflux")
+    implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
+    implementation("org.jetbrains.kotlin:kotlin-reflect")
+    testImplementation("org.springframework.boot:spring-boot-starter-test")
+    testImplementation("io.projectreactor:reactor-test")
+}
 
 tasks.withType<KotlinCompile> {
     kotlinOptions {
@@ -54,8 +57,3 @@ tasks.withType<KotlinCompile> {
         jvmTarget = "1.8"
     }
 }
-
-
-
-
-

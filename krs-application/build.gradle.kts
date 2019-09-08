@@ -4,10 +4,6 @@
  * This generated file contains a sample Kotlin application project to get you started.
  */
 
-val cl = Action<Task> { println("I'm ${this.project.name}") }
-
-tasks.register("hello") { doLast(cl) }
-
 // Use Kotlin test spec Kotlintest (https://github.com/kotlintest/kotlintest)
 val test by tasks.getting(Test::class) {
     useJUnitPlatform { }
@@ -15,8 +11,8 @@ val test by tasks.getting(Test::class) {
 
 plugins {
     // Apply the Kotlin JVM plugin to add support for Kotlin on the JVM.
-    kotlin("jvm") version "1.3.50"
-    kotlin("plugin.spring") version "1.3.50"
+    kotlin("jvm")
+    kotlin("plugin.spring")
 }
 
 repositories {

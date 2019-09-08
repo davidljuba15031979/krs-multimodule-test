@@ -1,4 +1,4 @@
-package com.nortal
+package com.nortal.krs.adapter.web
 
 
 import org.springframework.http.MediaType

@@ -9,11 +9,11 @@ For further reference, please consider the following sections:
 
 Start application: 
 
-#####Start MongoDB
+##### Start MongoDB
 
 ``` docker-compose -f krs-docker/docker-compose.yml up -d mongo mongo-express```
 
-#####Start Spring
+##### Start Spring
 
 ```gradle --info run -x test```
 
