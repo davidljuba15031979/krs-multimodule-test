@@ -6,6 +6,11 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
  * This generated file contains a sample Kotlin library project to get you started.
  */
 
+//https://www.baeldung.com/junit-5-gradle
+val test by tasks.getting(Test::class) {
+    useJUnitPlatform { }
+}
+
 plugins {
     kotlin("jvm")
     id("io.spring.dependency-management")
@@ -37,24 +42,32 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.0-RC")
 
-    testImplementation("io.kotlintest:kotlintest-runner-junit5:3.3.2")
     // https://stackoverflow.com/questions/53277045/how-does-kotlintest-test-spring-boot-application
     testImplementation("org.springframework.boot:spring-boot-starter-test")
+    // Use junit 5 (https://www.baeldung.com/junit-5-gradle)
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.5.1")
+    testRuntimeOnly( "org.junit.jupiter:junit-jupiter-engine:5.5.1")
+
+    // Use the Kotlin test library.
     testImplementation("org.jetbrains.kotlin:kotlin-test")
+    // Use the Kotlin JUnit integration.
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit")
-    testImplementation("io.kotlintest:kotlintest-extensions-spring:3.4.0")
-    testImplementation("org.junit.jupiter:junit-jupiter-api:5.3.1")
-    testImplementation("org.junit.jupiter:junit-jupiter-engine:5.3.1")
+
+    // Use Kotlin test spec Kotlintest (https://github.com/kotlintest/kotlintest)
+    testImplementation("io.kotlintest:kotlintest-runner-junit5:3.3.2")
+
+    testImplementation("io.mockk:mockk:1.9.3")
+    testImplementation("io.mockk:mockk-common:1.9.3")
+
+    // slf4j(from kotlintest) -> log4j2 (implementation) -> yaml (configuration)
+    testImplementation("org.apache.logging.log4j:log4j-api:2.12.0")
+    testImplementation("org.apache.logging.log4j:log4j-core:2.12.0")
+    // removing log4j-slf4j-impl as of: "Caused by: org.apache.logging.log4j.LoggingException: log4j-slf4j-impl cannot be present with log4j-to-slf4j" from spring-boot-starter-logging
+//    testImplementation("org.apache.logging.log4j:log4j-slf4j-impl:2.12.0")
+    testImplementation("com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.9.9")
+    testImplementation("com.fasterxml.jackson.core:jackson-databind:2.9.9.1")
+
 }
-
-
-tasks.withType<KotlinCompile> {
-    kotlinOptions {
-        freeCompilerArgs = listOf("-Xjsr305=strict")
-        jvmTarget = "1.8"
-    }
-}
-
 
 
 

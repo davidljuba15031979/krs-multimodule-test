@@ -1,6 +1,5 @@
-package krs.persistence
+package com.nortal.krs.adapter.persistence
 
-import com.nortal.krs.adapter.persistence.CourseRepository
 import com.nortal.krs.submodule.Course
 import org.junit.jupiter.api.Test
 import org.junit.runner.RunWith
