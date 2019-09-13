@@ -7,7 +7,7 @@
  * in the user manual at https://docs.gradle.org/5.5/userguide/multi_project_builds.html
  */
 
-rootProject.name = "krs-multimodule-test"
+rootProject.name = "krs-core"
 
 include("krs-domain:krs-course:krs-application")
 include("krs-spring-app")
