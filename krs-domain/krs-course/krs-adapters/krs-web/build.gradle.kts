@@ -27,7 +27,7 @@ repositories {
 }
 
 dependencies {
-    implementation( project(":krs-application"))
+    implementation( project(":krs-domain:krs-course:krs-application"))
 
 
     // Align versions of all Kotlin components

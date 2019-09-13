@@ -39,7 +39,7 @@ repositories {
 
 dependencies {
 
-    implementation(project(":krs-application"))
+    implementation(project(":krs-domain:krs-course:krs-application"))
     implementation("org.springframework.boot:spring-boot-starter-data-mongodb-reactive")
 
     // Use the Kotlin JDK 8 standard library.

@@ -14,9 +14,9 @@ repositories {
 }
 
 dependencies {
-    implementation( project(":krs-application"))
-    implementation( project(":krs-adapters:krs-persistence"))
-    implementation( project(":krs-adapters:krs-web"))
+    implementation( project(":krs-domain:krs-course:krs-application"))
+    implementation( project(":krs-domain:krs-course:krs-adapters:krs-persistence"))
+    implementation( project(":krs-domain:krs-course:krs-adapters:krs-web"))
 
     implementation("org.springframework.boot:spring-boot-autoconfigure")
     implementation("org.jetbrains.kotlin:kotlin-reflect")

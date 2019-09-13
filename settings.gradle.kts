@@ -9,8 +9,8 @@
 
 rootProject.name = "krs-multimodule-test"
 
-include("krs-application")
+include("krs-domain:krs-course:krs-application")
 include("krs-spring-app")
-include("krs-adapters:krs-persistence")
-include("krs-adapters:krs-web")
+include("krs-domain:krs-course:krs-adapters:krs-persistence")
+include("krs-domain:krs-course:krs-adapters:krs-web")
 include("krs-docker")
