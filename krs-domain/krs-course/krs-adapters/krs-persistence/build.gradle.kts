@@ -51,6 +51,9 @@ dependencies {
     // Use junit 5 (https://www.baeldung.com/junit-5-gradle)
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.5.1")
     testRuntimeOnly( "org.junit.jupiter:junit-jupiter-engine:5.5.1")
+    //ClassNotFound: SelectorResolver...
+    testRuntimeOnly("org.junit.platform:junit-platform-engine:1.5.1")
+    testRuntimeOnly("org.junit.platform:junit-platform-commons:1.5.1")
 
     // Use the Kotlin test library.
     testImplementation("org.jetbrains.kotlin:kotlin-test")

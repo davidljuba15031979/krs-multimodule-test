@@ -15,4 +15,11 @@ Configuration:
       AppenderRef:
         - ref: Console
         - ref: File
-      level: trace
+      level: info
+
+    Logger:
+      name: org.mongodb.driver.protocol.command
+      AppenderRef:
+        - ref: Console
+        - ref: File
+      level: debug
