@@ -1,6 +1,6 @@
 package com.nortal.krs.adapter.persistence
 
-import com.nortal.krs.submodule.Course
+import com.nortal.krs.domain.Course
 import org.junit.jupiter.api.Test
 import org.junit.runner.RunWith
 import org.springframework.beans.factory.annotation.Autowired

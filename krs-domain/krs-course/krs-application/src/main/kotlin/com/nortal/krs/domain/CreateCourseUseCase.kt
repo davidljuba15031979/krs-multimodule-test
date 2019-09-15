@@ -1,6 +1,5 @@
-package com.nortal.krs.submodule.domain
+package com.nortal.krs.domain
 
-import com.nortal.krs.submodule.Course
 
 interface CreateCourseUseCase {
 

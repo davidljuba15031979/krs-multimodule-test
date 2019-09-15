@@ -1,7 +1,7 @@
 package com.nortal.krs.adapter.persistence
 
-import com.nortal.krs.submodule.Course
-import com.nortal.krs.submodule.adapter.out.persistence.SaveCourse
+import com.nortal.krs.application.port.out.persistence.SaveCourse
+import com.nortal.krs.domain.Course
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Component
 

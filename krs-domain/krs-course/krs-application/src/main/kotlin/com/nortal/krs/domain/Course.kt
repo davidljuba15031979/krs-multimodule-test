@@ -1,4 +1,4 @@
-package com.nortal.krs.submodule
+package com.nortal.krs.domain
 
 import java.util.*
 

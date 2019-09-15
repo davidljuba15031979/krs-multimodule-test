@@ -1,7 +1,6 @@
-package com.nortal.krs.submodule.domain
+package com.nortal.krs.domain
 
-import com.nortal.krs.submodule.Course
-import com.nortal.krs.submodule.adapter.out.persistence.SaveCourse
+import com.nortal.krs.application.port.out.persistence.SaveCourse
 import org.springframework.stereotype.Service
 
 
