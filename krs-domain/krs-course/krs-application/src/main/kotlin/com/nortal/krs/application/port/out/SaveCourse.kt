@@ -1,4 +1,4 @@
-package com.nortal.krs.application.port.out.persistence
+package com.nortal.krs.application.port.out
 
 import com.nortal.krs.domain.Course
 

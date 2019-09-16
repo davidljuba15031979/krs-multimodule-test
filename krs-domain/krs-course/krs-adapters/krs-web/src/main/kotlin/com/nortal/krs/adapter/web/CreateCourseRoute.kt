@@ -1,6 +1,6 @@
 package com.nortal.krs.adapter.web
 
-import com.nortal.krs.domain.CreateCourseUseCase
+import com.nortal.krs.application.port.`in`.CreateCourseUseCase
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.web.reactive.config.EnableWebFlux

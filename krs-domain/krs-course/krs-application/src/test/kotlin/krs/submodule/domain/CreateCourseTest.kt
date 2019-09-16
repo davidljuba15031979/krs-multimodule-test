@@ -3,6 +3,8 @@
  */
 package krs.submodule.domain
 
+import com.nortal.krs.application.port.out.SaveCourse
+import com.nortal.krs.application.service.CreateCourse
 import com.nortal.krs.domain.Course
 import io.kotlintest.shouldBe
 import io.kotlintest.specs.StringSpec
@@ -10,9 +12,7 @@ import io.mockk.MockKAnnotations
 import io.mockk.every
 import io.mockk.impl.annotations.InjectMockKs
 import io.mockk.impl.annotations.MockK
-import com.nortal.krs.application.port.out.persistence.SaveCourse
-import com.nortal.krs.domain.CreateCourse
-import java.util.*
+import java.util.UUID
 
 class CreateCourseTest : StringSpec() {
 
