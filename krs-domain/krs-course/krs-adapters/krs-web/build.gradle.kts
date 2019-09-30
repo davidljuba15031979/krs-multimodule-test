@@ -14,7 +14,7 @@ plugins {
 // https://stackoverflow.com/questions/26353607/gradle-with-no-main-class
 dependencyManagement {
     imports {
-        mavenBom("org.springframework.boot:spring-boot-dependencies:2.1.6.RELEASE") {
+        mavenBom("org.springframework.boot:spring-boot-dependencies:2.1.8.RELEASE") {
             bomProperty("kotlin.version", "1.3.50") // https://youtrack.jetbrains.com/issue/KT-27994#focus=streamItem-27-3148043.0-0
         }
     }

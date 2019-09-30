@@ -20,6 +20,7 @@ repositories {
 
 dependencies {
     implementation( project(":krs-domain"))
+    implementation( project(":krs-security"))
 
     implementation("org.springframework.boot:spring-boot-autoconfigure")
     implementation("org.jetbrains.kotlin:kotlin-reflect")

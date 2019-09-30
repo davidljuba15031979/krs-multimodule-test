@@ -11,6 +11,7 @@ rootProject.name = "krs-core"
 
 include("krs-domain:krs-course:krs-application")
 include("krs-spring-app")
+include("krs-security")
 include("krs-domain:krs-course:krs-adapters:krs-persistence")
 include("krs-domain:krs-course:krs-adapters:krs-web")
 include("krs-docker")
